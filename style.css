@@ -1,3 +1,10 @@
+/* Style untuk body */
+body {
+  background-color: #343a40;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Style untuk judul utama */
 p {
   font-weight: bold;
@@ -5,6 +12,7 @@ p {
   color: #fff;
   text-shadow: 2px 2px 2px #000;
 }
+
 h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -13,12 +21,18 @@ h1 {
   text-shadow: 2px 2px 2px #000;
 }
 
+.card {
+  background-color: #212529;
+  border-radius: auto;
+  box-shadow: 2px 2px 2px #000;
+  transition: all 0.3s ease;
+}
+
 /* Style untuk teks pada card */
 .card-body h2 {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-
   margin-bottom: 0;
   color: #fff;
 }
@@ -32,64 +46,25 @@ h1 {
   text-shadow: 1px 1px 1px #000;
 }
 
-/* Style untuk tombol submit */
-.btn-primary {
-  border-radius: 0%;
-  margin-left: 5px;
-  box-shadow: 2px 2px 2px #000;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-.btn-primary:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
-}
-
-/* Style untuk select negara */
-#country-select {
-  box-shadow: 2px 2px 2px #000;
-  color: #fff;
-  background-color: #343a40;
-}
-
-/* Style untuk body */
-body {
-  background-color: #343a40;
-  color: #fff;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Style untuk container */
-.container {
-  margin-top: 3rem;
-}
-
-/* Style untuk kolom */
-.col-md-4 {
-  justify-content: center;
-}
-
 /* Style untuk hover pada card */
 .card:hover {
   transform: scale(1.09);
   box-shadow: 5px 5px 5px #000;
 }
 
-/* Style untuk select negara pada focus */
-#country-select:focus {
-  outline: none;
-  box-shadow: 2px 2px 2px #000, 0 0 4px #000;
+/* Style untuk select negara */
+#country-select {
+  text-align: center;
+  color: #fff;
+  background-color: #343a40;
 }
 
-/* Style untuk tombol submit pada focus */
-.btn-primary:focus {
-  outline: none;
-  box-shadow: 2px 2px 2px #000, 0 0 4px #000;
+#country-select:hover {
+  cursor: pointer;
 }
 
 /* Style untuk input select negara */
 .form-control {
-  border-radius: 0;
   border: none;
   background-color: #343a40;
   color: #fff;
@@ -98,21 +73,6 @@ body {
 /* Style untuk input select negara pada focus */
 .form-control:focus {
   outline: none;
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid #343a40;
   box-shadow: none;
-}
-
-/* Style untuk card */
-.card {
-  background-color: #212529;
-  border-radius: auto;
-  box-shadow: 2px 2px 2px #000;
-  transition: all 0.3s ease;
-}
-img.github-logo {
-  border-radius: 50%;
-}
-img.github-logo:hover {
-  transform: scale(1.09);
-  box-shadow: 5px 5px 5px #000;
 }

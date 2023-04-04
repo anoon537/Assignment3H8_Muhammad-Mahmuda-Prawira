@@ -6,11 +6,21 @@ const options = {
   },
 };
 
-const searchForm = document.getElementById("search-form");
-searchForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const searchInput = document.getElementById("country-select");
-  const country = searchInput.value;
+const countrySelect = document.getElementById("country-select");
+fetch("https://covid-193.p.rapidapi.com/countries", options)
+  .then((response) => response.json())
+  .then((response) => {
+    response.response.forEach((country) => {
+      const option = document.createElement("option");
+      option.value = country;
+      option.textContent = country;
+      countrySelect.appendChild(option);
+    });
+  });
+
+const countryInput = document.getElementById("country-select");
+countryInput.addEventListener("change", (event) => {
+  const country = event.target.value;
   fetch(
     `https://covid-193.p.rapidapi.com/statistics?country=${country}`,
     options
@@ -43,25 +53,5 @@ searchForm.addEventListener("submit", (event) => {
       };
       document.getElementById("current-date").textContent =
         currentDate.toLocaleDateString("id", options);
-    })
-    .catch((err) => {
-      console.error(err);
-      alert("Failed to fetch data for country: " + country);
     });
 });
-
-const countrySelect = document.getElementById("country-select");
-fetch("https://covid-193.p.rapidapi.com/countries", options)
-  .then((response) => response.json())
-  .then((response) => {
-    response.response.forEach((country) => {
-      const option = document.createElement("option");
-      option.value = country;
-      option.textContent = country;
-      countrySelect.appendChild(option);
-    });
-  })
-  .catch((err) => {
-    console.error(err);
-    alert("Failed to fetch data for countries");
-  });
