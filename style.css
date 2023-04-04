@@ -18,7 +18,7 @@ p{
 	font-size: 2rem;
 	font-weight: bold;
 	text-align: center;
-	margin-top: 1rem;
+	
 	margin-bottom: 0;
 	color: #fff;
 	}
@@ -34,6 +34,8 @@ p{
 	
 	/* Style untuk tombol submit */
 	.btn-primary {
+	border-radius: 0%;
+	margin-left: 5px;
 	box-shadow: 2px 2px 2px #000;
 	background-color: #007bff;
 	border-color: #007bff;
@@ -69,7 +71,7 @@ p{
 	
 	/* Style untuk hover pada card */
 	.card:hover {
-	transform: scale(1.02);
+	transform: scale(1.09);
 	box-shadow: 5px 5px 5px #000;
 	}
 	
@@ -89,7 +91,6 @@ p{
 	.form-control {
 	border-radius: 0;
 	border: none;
-	border-bottom: 2px solid #aaa;
 	background-color: #343a40;
 	color: #fff;
 	}
@@ -104,7 +105,14 @@ p{
 	/* Style untuk card */
 	.card {
 	background-color: #212529;
-	border-radius: 10px;
+	border-radius: auto;
 	box-shadow: 2px 2px 2px #000;
 	transition: all 0.3s ease;
 	}
+	img.github-logo {
+		border-radius: 50%;
+	  }
+	  img.github-logo:hover {
+		transform: scale(1.09);
+		box-shadow: 5px 5px 5px #000;
+		}
